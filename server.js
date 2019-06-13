@@ -9,6 +9,5 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 app.get("/hubble", (req, res) => {
   axios.get("http://hubblesite.org/api/v3/image/5").then(response => {
     res.send(response.data);
-    console.log(response.data);
   });
 });
